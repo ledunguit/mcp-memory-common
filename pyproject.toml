@@ -1,0 +1,16 @@
+[build-system]
+requires = ["hatchling>=1.20"]
+build-backend = "hatchling.build"
+
+[project]
+name = "mcp-memory-common"
+version = "0.1.0"
+description = "Shared schema models for memory leak orchestration across static and dynamic MCP servers."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+  "pydantic>=2.6",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/mcp_memory_common"]
