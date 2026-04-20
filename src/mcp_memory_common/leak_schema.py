@@ -97,6 +97,11 @@ class LeakSuggestion(BaseModel):
     rationale: str
     code_change_hint: str | None = None
     target_location: LeakLocation | None = None
+    before_snippet: str | None = None
+    after_snippet: str | None = None
+    unified_diff: str | None = None
+    before_start_line: int | None = None
+    after_start_line: int | None = None
 
 
 class VerdictResult(BaseModel):
